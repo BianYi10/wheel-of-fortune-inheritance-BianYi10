@@ -1,5 +1,11 @@
 package Part1;
-
+/**
+ * Class using Letter Frequency BOT to play this game
+ * @author Yi
+ * @see Game
+ * @see WheelOfFortuneAIGame
+ * @see WheelOfFortunePlayer
+ */
 public class WheelOfFortuneAIPlayerFrequency implements WheelOfFortunePlayer{
 
     private String frequency ="ETAINOSHRDLUCMFWYGPBVKQJXZ";

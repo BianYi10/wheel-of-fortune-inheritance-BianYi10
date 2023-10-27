@@ -1,10 +1,17 @@
 package Part2;
 
+import Part1.AllGamesRecord;
 import Part1.Game;
 import Part1.GamesRecord;
+import Part1.WheelOfFortune;
 
 import java.util.Scanner;
-
+/**
+ * Abstract class for GuessingGame
+ * @author Yi
+ * @see Mastermind
+ * @see WheelOfFortuneGuess
+ */
 public abstract class GuessingGame extends Game {
     private int n=10;
     private String playerId;

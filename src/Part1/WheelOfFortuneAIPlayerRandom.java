@@ -2,7 +2,13 @@ package Part1;
 
 import java.util.HashSet;
 import java.util.Random;
-
+/**
+ * Class using random letter BOT to play this game
+ * @author Yi
+ * @see Game
+ * @see WheelOfFortuneAIGame
+ * @see WheelOfFortunePlayer
+ */
 public class WheelOfFortuneAIPlayerRandom implements WheelOfFortunePlayer{
     private HashSet<Character> guessedLetter;
 

@@ -1,5 +1,11 @@
 package Part1;
-
+/**
+ * Class using Alphabet BOT to play this game
+ * @author Yi
+ * @see Game
+ * @see WheelOfFortuneAIGame
+ * @see WheelOfFortunePlayer
+ */
 public class WheelOfFortuneAIPlayerAlphabet implements WheelOfFortunePlayer{
 
     private String alphabet ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";

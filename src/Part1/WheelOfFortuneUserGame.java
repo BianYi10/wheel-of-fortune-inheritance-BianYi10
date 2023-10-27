@@ -1,7 +1,12 @@
 package Part1;
 
 import java.util.Scanner;
-
+/**
+ * Class using real user to play this game
+ * @author Yi
+ * @see Game
+ * @see WheelOfFortune
+ */
 public class WheelOfFortuneUserGame extends WheelOfFortune{
 
     @Override

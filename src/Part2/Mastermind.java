@@ -1,12 +1,19 @@
 package Part2;
 
 import Part1.AllGamesRecord;
+import Part1.Game;
+import Part1.WheelOfFortuneAIGame;
+import Part1.WheelOfFortuneUserGame;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
-
+/**
+ * Class for game Mastermind extends from GuessingGame
+ * @author Yi
+ * @see GuessingGame
+ */
 public class Mastermind extends GuessingGame{
     private int CODESIZE;
     private StringBuilder secret;

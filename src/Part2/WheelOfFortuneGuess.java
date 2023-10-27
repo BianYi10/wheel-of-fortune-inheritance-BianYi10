@@ -6,7 +6,11 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
-
+/**
+ * Class for game WheelOfFortuneGuess extends from GuessingGame
+ * @author Yi
+ * @see GuessingGame
+ */
 public class WheelOfFortuneGuess extends GuessingGame{
     private String guessLetter;
     private StringBuilder hiddenPhase;
