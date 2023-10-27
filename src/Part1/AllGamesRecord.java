@@ -19,7 +19,7 @@ public class AllGamesRecord {
     }
     /**
      * Add new gamesRecord in gamesRecord List gamesRecords
-     * @param GamesRecord gamesRecord
+     * @param gamesRecord
      */
     public int add(GamesRecord gamesRecord){
         gamesRecords.add(gamesRecord);
@@ -41,7 +41,7 @@ public class AllGamesRecord {
     }
     /**
      * Get average in playerId's gamesRecords
-     * @param String playerId
+     * @param  playerId
      * @return an number of int which means the average
      */
     public int average(String playerId){
@@ -60,7 +60,7 @@ public class AllGamesRecord {
     }
     /**
      * Get top n gamesRecords in all records
-     * @param int n
+     * @param  n
      * @return a AllGamesRecord object
      */
     public AllGamesRecord highGameList(int n){
@@ -73,8 +73,8 @@ public class AllGamesRecord {
     }
     /**
      * Get top n gamesRecords in playerId's records
-     * @param String playerId
-     * @param int n
+     * @param  playerId
+     * @param  n
      * @return a AllGamesRecord object
      */
     public AllGamesRecord highGameList(String playerId, int n){
