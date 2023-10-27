@@ -1,6 +1,8 @@
 package Part1;
 
 import java.util.ArrayList;
+import java.util.Objects;
+
 /**
  * Class for WheelOfFortuneAIGame using BOT to play this game
  * @author Yi
@@ -83,5 +85,27 @@ public class WheelOfFortuneAIGame extends WheelOfFortune{
         System.out.println("recordAlphabetAverage = ["+record.average("Alphabet Bot")+"]");
         System.out.println("recordFrequencyAverage = ["+record.average("Frequency Bot")+"]");
         System.out.println("recordRandomAverage = ["+record.average("Random Bot")+"]");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        WheelOfFortuneAIGame that = (WheelOfFortuneAIGame) o;
+        return index == that.index && Objects.equals(wofList, that.wofList);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), wofList, index);
+    }
+
+    @Override
+    public String toString() {
+        return "WheelOfFortuneAIGame{" +
+                "wofList=" + wofList +
+                ", index=" + index +
+                '}';
     }
 }

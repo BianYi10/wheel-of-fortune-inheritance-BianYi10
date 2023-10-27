@@ -1,6 +1,7 @@
 package Part1;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Random;
 /**
  * Class using random letter BOT to play this game
@@ -37,5 +38,25 @@ public class WheelOfFortuneAIPlayerRandom implements WheelOfFortunePlayer{
     @Override
     public void reset() {
         guessedLetter.clear();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        WheelOfFortuneAIPlayerRandom that = (WheelOfFortuneAIPlayerRandom) o;
+        return Objects.equals(guessedLetter, that.guessedLetter);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(guessedLetter);
+    }
+
+    @Override
+    public String toString() {
+        return "WheelOfFortuneAIPlayerRandom{" +
+                "guessedLetter=" + guessedLetter +
+                '}';
     }
 }

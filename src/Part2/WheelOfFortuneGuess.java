@@ -147,4 +147,29 @@ public class WheelOfFortuneGuess extends GuessingGame{
         System.out.println("recordAllAverage = ["+record.average()+"]");
         System.out.println("recordYAverage = ["+record.average("Y")+"]");
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        WheelOfFortuneGuess that = (WheelOfFortuneGuess) o;
+        return Objects.equals(guessLetter, that.guessLetter) && Objects.equals(hiddenPhase, that.hiddenPhase) && Objects.equals(phrase, that.phrase) && Objects.equals(phraseList, that.phraseList) && Objects.equals(misses, that.misses);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), guessLetter, hiddenPhase, phrase, phraseList, misses);
+    }
+
+    @Override
+    public String toString() {
+        return "WheelOfFortuneGuess{" +
+                "guessLetter='" + guessLetter + '\'' +
+                ", hiddenPhase=" + hiddenPhase +
+                ", phrase='" + phrase + '\'' +
+                ", phraseList=" + phraseList +
+                ", misses=" + misses +
+                '}';
+    }
 }

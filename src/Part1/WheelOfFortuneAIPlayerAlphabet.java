@@ -1,4 +1,7 @@
 package Part1;
+
+import java.util.Objects;
+
 /**
  * Class using Alphabet BOT to play this game
  * @author Yi
@@ -28,6 +31,24 @@ public class WheelOfFortuneAIPlayerAlphabet implements WheelOfFortunePlayer{
         indexOfAlphabet = -1;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        WheelOfFortuneAIPlayerAlphabet that = (WheelOfFortuneAIPlayerAlphabet) o;
+        return indexOfAlphabet == that.indexOfAlphabet && Objects.equals(alphabet, that.alphabet);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(alphabet, indexOfAlphabet);
+    }
 
+    @Override
+    public String toString() {
+        return "WheelOfFortuneAIPlayerAlphabet{" +
+                "alphabet='" + alphabet + '\'' +
+                ", indexOfAlphabet=" + indexOfAlphabet +
+                '}';
+    }
 }

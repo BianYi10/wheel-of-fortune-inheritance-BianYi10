@@ -1,4 +1,7 @@
 package Part1;
+
+import java.util.Objects;
+
 /**
  * Class to store each game record
  * @author Yi
@@ -21,14 +24,6 @@ public class GamesRecord implements Comparable<GamesRecord>{
     }
 
     @Override
-    public String toString() {
-        return "Part1.GamesRecord{" +
-                "score=" + score +
-                ", id='" + id + '\'' +
-                '}';
-    }
-
-    @Override
     public int compareTo(GamesRecord o) {
         if(score<o.score){
             return 1;
@@ -37,5 +32,25 @@ public class GamesRecord implements Comparable<GamesRecord>{
             return -1;
         }
         return 0;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GamesRecord that = (GamesRecord) o;
+        return score == that.score && Objects.equals(id, that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(score, id);
+    }
+
+    @Override
+    public String toString() {
+        return "GamesRecord{" +
+                "score=" + score +
+                ", id='" + id + '\'' +
+                '}';
     }
 }

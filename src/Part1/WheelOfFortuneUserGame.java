@@ -25,4 +25,9 @@ public class WheelOfFortuneUserGame extends WheelOfFortune{
         System.out.println("recordAllAverage = ["+record.average()+"]");
         System.out.println("recordYAverage = ["+record.average("Y")+"]");
     }
+
+    @Override
+    public String toString() {
+        return "WheelOfFortuneUserGame{}";
+    }
 }

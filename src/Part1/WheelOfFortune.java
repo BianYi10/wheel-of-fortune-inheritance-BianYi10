@@ -197,4 +197,31 @@ public abstract class WheelOfFortune extends Game{
         return choice.equals("Y")||choice.equals("y");
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        WheelOfFortune that = (WheelOfFortune) o;
+        return score == that.score && n == that.n && Objects.equals(phraseList, that.phraseList) && Objects.equals(phrase, that.phrase) && Objects.equals(guessLetter, that.guessLetter) && Objects.equals(playerId, that.playerId) && Objects.equals(hiddenPhase, that.hiddenPhase) && Objects.equals(misses, that.misses);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), phraseList, phrase, guessLetter, playerId, score, hiddenPhase, n, misses);
+    }
+
+    @Override
+    public String toString() {
+        return "WheelOfFortune{" +
+                "phraseList=" + phraseList +
+                ", phrase='" + phrase + '\'' +
+                ", guessLetter='" + guessLetter + '\'' +
+                ", playerId='" + playerId + '\'' +
+                ", score=" + score +
+                ", hiddenPhase=" + hiddenPhase +
+                ", n=" + n +
+                ", misses=" + misses +
+                '}';
+    }
 }

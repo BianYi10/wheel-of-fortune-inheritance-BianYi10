@@ -1,4 +1,7 @@
 package Part1;
+
+import java.util.Objects;
+
 /**
  * Class using Letter Frequency BOT to play this game
  * @author Yi
@@ -28,5 +31,26 @@ public class WheelOfFortuneAIPlayerFrequency implements WheelOfFortunePlayer{
     @Override
     public void reset() {
         indexOfFrequency=-1;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        WheelOfFortuneAIPlayerFrequency that = (WheelOfFortuneAIPlayerFrequency) o;
+        return indexOfFrequency == that.indexOfFrequency && Objects.equals(frequency, that.frequency);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(frequency, indexOfFrequency);
+    }
+
+    @Override
+    public String toString() {
+        return "WheelOfFortuneAIPlayerFrequency{" +
+                "frequency='" + frequency + '\'' +
+                ", indexOfFrequency=" + indexOfFrequency +
+                '}';
     }
 }

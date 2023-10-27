@@ -183,4 +183,30 @@ public class Mastermind extends GuessingGame{
         System.out.println("recordYAverage = ["+record.average("Y")+"]");
 
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Mastermind that = (Mastermind) o;
+        return CODESIZE == that.CODESIZE && Objects.equals(secret, that.secret) && Objects.equals(guess, that.guess) && Objects.equals(hiddenPhase, that.hiddenPhase) && Objects.equals(misses, that.misses) && Objects.equals(phraseList, that.phraseList);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), CODESIZE, secret, guess, hiddenPhase, misses, phraseList);
+    }
+
+    @Override
+    public String toString() {
+        return "Mastermind{" +
+                "CODESIZE=" + CODESIZE +
+                ", secret=" + secret +
+                ", guess=" + guess +
+                ", hiddenPhase=" + hiddenPhase +
+                ", misses=" + misses +
+                ", phraseList=" + phraseList +
+                '}';
+    }
 }
